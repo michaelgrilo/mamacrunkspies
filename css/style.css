@@ -1,0 +1,71 @@
+@font-face {
+	font-family: hickory-jack;
+	src: url(../fonts/hickory-jack.ttf);
+}
+
+body {
+	background: #fde699;
+}
+
+header, footer {
+	background: #6666cc;
+	color: #fff;
+}
+
+header img {
+	height: 100px;
+	display: block;
+	margin: 10px auto;
+}
+
+header, nav {
+	padding: 10px 20%;
+}
+
+nav {
+	background: #9966cc;
+	color: #fff;
+	font-weight: bold;
+}
+
+footer {
+	margin-top: 20px;
+}
+
+#wrapper div {
+	padding: 20px;
+	color: #29394d;
+	background-color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+	#wrapper {
+		margin-top: 0px;
+	}
+	#header {
+		position: relative;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#header header, #header nav {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	#wrapper {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	#header header, #header nav {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
+	
+	#wrapper {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
