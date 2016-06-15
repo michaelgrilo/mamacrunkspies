@@ -2,73 +2,60 @@
   box-sizing: border-box;
 }
 
-/* reset browser styles */
-body, div, h1, h2, p, ul {
+/* reset browser styles on elements used */
+body, div, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: #fde699;
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: 'Neucha', Helvetica, sans-serif;
 }
 
-footer {
-  text-align: center;
+body a {
+  color: #7f3f98;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Rochester', cursive;
+  color: #7f3f98;
 }
 
 header {
-  margin: 0 10px;
-  width: 70%;
-  font-family: 'Rochester', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 5px 0;
+  text-align: justify;
 }
 
 ul {
   list-style: circle inside;
 }
 
-[class*='col-'] {
-  float: left;
-  padding-right: 10px;
-}
-
-.container {
-  margin: 0 0 10px 0;
-}
-
-/* force container to contain full height of children, aka micro clearfix hack */
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.container [class*='col-']:last-of-type {
-  padding-right: 0;
-}
-
-.center {
-  margin: 0 auto;
-  width: 50%;
-}
-
-.col-1-2 {
-  width: 50%;
-  border: 1px dashed red;
-}
-
-.grid-pad {
+.card {
   padding: 10px;
   background: white;
 }
-.grid-pad [class*='col-']:last-of-type {
-  padding-right: 10px;
+
+.container {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  margin: 0 auto;
+  width: 65%;
 }
 
 .logo {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .logo img{
@@ -77,18 +64,32 @@ ul {
 }
 
 .module {
-  background: #eee;
-  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+  padding: 5px 15px;
+}
+
+.module-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* remove extra margin on last .module */
+[class*='module']:last-of-type {
+  margin-bottom: 0;
 }
 
 .social {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .social img{
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
 
 .text-center {
