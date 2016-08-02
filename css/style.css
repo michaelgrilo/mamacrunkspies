@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+/* reset browser styles on elements used */
+body, div, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fde699;
+  font-family: 'Neucha', Helvetica, sans-serif;
+}
+
+body a {
+  color: #7f3f98;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: 'Rochester', cursive;
+  color: #7f3f98;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+/* ?? What does this section do anymore ?? */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 5px 0;
+  text-align: justify;
+}
+
+ul {
+  list-style: circle inside;
+}
+
+.banner {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.banner img {
+  display: inline-block;
+  max-width:100%;
+  height:auto;
+}
+
+.card {
+  padding: 10px 25px;
+  background: white;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  margin: 0 auto;
+  width: 65%;
+}
+
+.logo {
+  margin-top: 10px;
+  padding: 0 35%;
+  text-align: center;
+}
+
+.logo img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.module-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.module {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+  padding: 5px 15px;
+}
+
+/* remove extra margin on last .module */
+[class*='module']:last-of-type {
+  margin-bottom: 0;
+}
+
+.social {
+  text-align: center;
+}
+
+.social img{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 780px) { /* how to get it to have a breakpoint right when flex wraps the modules? */
+  body {
+    padding: 0 5%;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+  }
+}
+
+@media (min-width: 1110px) {
+  body {
+    padding: 0 12.5%;
+  }
+}
+
+@media (min-width: 1570px) {
+  body {
+    padding: 0 25%;
+  }
+  .module-wrapper {
+    flex-wrap: nowrap;
+  }
+}
